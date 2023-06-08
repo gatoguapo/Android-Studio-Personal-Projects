@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Restaurante</string>
+    <string name="idItemPlatillos">Platillos</string>
+    <string name="idItemClientes">Clientes</string>
+    <string name="idItemOrdenes">Ordenes</string>
+    <string name="idItemReporte1">Reporte: Acumulado de ventas por platillo</string>
+    <string name="idItemReporte2">Reporte: Platillos que no han sido ordenados</string>
+    <string name="idItemReporte3">Reporte: Clientes que no han ordenado mas de 5 veces el mismo platillo</string>
+</resources>

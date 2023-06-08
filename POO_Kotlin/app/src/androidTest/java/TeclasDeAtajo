@@ -1,0 +1,21 @@
+*** Para busqueda ***
+Barra de busqueda = Ctrl + F
+Reemplazar palabra en barra de busqueda = Ctrl + R
+Avanzar en la barra de busqueda = F3
+Buscar palabras en cualquier proyecto = MAYUS.x2
+Checar en que momento se usa una variable en especifico = Alt + F7
+Atajo para ver en donde declaraste un dato = Ctrl + Click
+Buscar clase = Ctrl + N
+
+*** Para escritura y manipulacion de codigo ***
+Mover lineas o conjunto de lineas = Alt + Shift + Tecla de arriba/abajo
+Duplicar una linea = Ctrl + D
+Borrar toda una linea = Alt + Suprimir
+Encerrar una varias lineas dentro de un if/else/try/catch/etc = Ctrl + Alt + T
+Cambiar de una funcion a otra = Alt + Teclas arriba/abajo
+Cambiar de una pestaña a otra = Alt + Teclas derecha/izquierda
+Minimizar o expandir los metodos = Ctrl + "+"/"-"
+Seleccionar lineas o segmentos de codigo = Shift + Teclas arriba/abajo/derecha/izquierda
+Escribir en varias linea a la vez = Alt + Click y arrastra el mouse hasta donde quieras
+
+*** Editor de diseño ***

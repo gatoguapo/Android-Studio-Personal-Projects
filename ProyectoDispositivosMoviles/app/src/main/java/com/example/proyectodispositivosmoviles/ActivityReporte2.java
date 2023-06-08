@@ -1,0 +1,71 @@
+package com.example.proyectodispositivosmoviles;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.AlertDialog;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.TableLayout;
+import android.widget.TextView;
+
+public class ActivityReporte2 extends AppCompatActivity {
+    BaseDeDatos Conexion;
+    SQLiteDatabase BD;
+    TableLayout tablaIdReporte2;
+    AlertDialog alertDialog;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_reporte2);
+
+        alertDialog = new AlertDialog.Builder(this).create();
+
+        Conexion = new BaseDeDatos(this, BaseDeDatos.databaseNombre, null, BaseDeDatos.version);
+        BD = Conexion.getWritableDatabase();
+        if (Conexion == null) {
+            alertDialog.setTitle(" Error ");
+            alertDialog.setMessage("No se ha podido conectar a la Base de Datos");
+            alertDialog.show();
+            return;
+        }
+        if (BD == null) {
+            alertDialog.setTitle(" Error ");
+            alertDialog.setMessage("La Base de Datos no se ha establecido para lectura y escritura");
+            alertDialog.show();
+            return;
+        }
+
+        tablaIdReporte2 = findViewById(R.id.idReporte2);
+        Procesar();
+    }
+
+    private void Procesar() {
+
+        String cadena = "SELECT p.IdPlatillo, p.Nombre " +
+                "FROM Platillos p LEFT JOIN Ordenes o ON p.IdPlatillo = o.IdPlatillo WHERE (o.Folio IS NULL)";
+
+        Cursor c = BD.rawQuery(cadena, null);
+        if (c.getCount() == 0) {
+            alertDialog.setTitle("Error");
+            alertDialog.setMessage("No se encontró el reporte!");
+            alertDialog.show();
+            return;
+        }
+        TextView linea = new TextView(this);
+        linea.setGravity(Gravity.CENTER);
+        linea.setTextColor(Color.BLUE);
+        linea.setTextSize(20);
+        linea.setText("*** CONSULTA DE REPORTE 2***");
+        tablaIdReporte2.addView(linea);
+        while (c.moveToNext()) {
+            linea = new TextView(this);
+            linea.setTextSize(20);
+            linea.setText("Id Platillo : " + c.getInt(0) + "\nPlatillo: " + c.getString(1) + "\n____________________________________");
+            tablaIdReporte2.addView(linea);
+        }
+    }
+}

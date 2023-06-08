@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/idItemPlatillos"
+        android:title="@string/idItemPlatillos" />
+    <item
+        android:id="@+id/idItemClientes"
+        android:title="@string/idItemClientes" />
+    <item
+        android:id="@+id/idItemOrdenes"
+        android:title="@string/idItemOrdenes" />
+    <item
+        android:id="@+id/idItemReporte1"
+        android:title="@string/idItemReporte1" />
+    <item
+        android:id="@+id/idItemReporte2"
+        android:title="@string/idItemReporte2" />
+    <item
+        android:id="@+id/idItemReporte3"
+        android:title="@string/idItemReporte3" />
+</menu>

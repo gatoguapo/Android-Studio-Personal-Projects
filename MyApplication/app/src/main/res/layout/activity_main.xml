@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cajaAlumno"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="@string/app_name"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cajaNControl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cajaNControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="@string/app_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cajaContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/cajaAlumno" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="37dp"
+        android:text="NControl:"
+        android:textAlignment="center"
+        android:textColor="#03A9F4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/cajaNControl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="32dp"
+        android:text="Alumno:"
+        android:textAlignment="center"
+        android:textColor="#03A9F4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/cajaAlumno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cajaContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="503dp"
+        android:ems="10"
+        android:hint="@string/app_name"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/cajaNControl" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="503dp"
+        android:text="Contraseña:"
+        android:textAlignment="center"
+        android:textColor="#03A9F4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cajaContraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnGenerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEnviar"
+        app:layout_constraintEnd_toStartOf="@+id/cajaContraseña" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="53dp"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="@+id/cajaContraseña"
+        app:layout_constraintStart_toEndOf="@+id/btnGenerar"
+        app:layout_constraintTop_toBottomOf="@+id/cajaContraseña" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
